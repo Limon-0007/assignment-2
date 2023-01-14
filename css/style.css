@@ -1,0 +1,148 @@
+/* ----------google font-------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
+
+/* ----------some common css---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    behavior: smooth;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* ---------css variables--------- */
+
+:root {
+    --font-weight-1: 400;
+    --font-weight-2: 500;
+    --font-weight-3: 600;
+    --font-weight-4: 700;
+    --clr-1: #FF900E;
+    --clr-2: #131313;
+    --clr-3: #727272;
+    --clr-4: #FFFFFF;
+    --clr-5: #424242;
+}
+
+/* --------header section starts from here------- */
+
+/* ----------nav bar------- */
+header {
+    background-color: #f8d7b2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 10px;
+}
+
+nav .logo h3 a {
+    font-weight: var(--font-weight-4);
+    font-size: 30px;
+    color: var(--clr-2);
+}
+
+nav ul {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+}
+
+nav ul li a {
+    font-weight: var(--font-weight-2);
+    font-size: 18px;
+    color: var(--clr-5);
+    transition: 0.7s ease-in-out;
+}
+nav ul li a:hover {
+    color: var(--clr-4);
+}
+
+/* -------------banner section starts from here---------- */
+
+.banner-texts {
+    text-align: center;
+    margin: 0.5rem;
+    padding: 2rem 2rem;
+}
+
+.banner-title {
+    font-size: 50px;
+    font-weight: var(--font-weight-4);
+    color: var(--clr-2);
+    margin-bottom: 1rem;
+}
+
+.banner-text {
+    font-size: 16px;
+    font-weight: var(--font-weight-1);
+    color: var(--clr-3);
+    margin-bottom: 1rem;
+}
+
+.banner-texts button {
+    border: 2px solid var(--clr-1);
+    color: var(--clr-4);
+    background-color: var(--clr-1);
+    font-weight: var(--font-weight-2);
+    font-size: 1rem;
+    padding: 0.8rem 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.banner-texts button:hover {
+    color: var(--clr-1);
+    background-color: var(--clr-4);
+}
+
+/* banner image */
+
+.banner-logo {
+    text-align: center;
+}
+.banner-logo img {
+    height: 100%;
+    width: 80%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------responsive section--------- */
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 576px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .banner {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .banner-logo {
+        text-align: center;
+    }
+    .banner-logo img {
+        height: 100%;
+        width: 80%;
+        object-fit: cover;
+    }
+}
