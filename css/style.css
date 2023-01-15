@@ -210,13 +210,13 @@ nav ul li a:hover {
 }
 
 .more-feature-title::before {
-    content: "";
-    position: absolute;
-    height: 5.4rem;
-    width: 5px;
-    background-color: var(--clr-1);
-    left: -1rem;
-    bottom: 10px;
+  content: "";
+  position: absolute;
+  height: 5.4rem;
+  width: 5px;
+  background-color: var(--clr-1);
+  left: -1rem;
+  bottom: 10px;
 }
 
 .more-feature-texts {
@@ -349,6 +349,7 @@ nav ul li a:hover {
   max-width: 88%;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 100px;
 }
 
 .sponsors-title {
@@ -376,7 +377,103 @@ nav ul li a:hover {
   filter: grayscale(100%);
 }
 
-/* ---------------1 ta new section banaite hobe & footer baki ache r text a kisu kaj korte hobe----------------- */
+/* -------------footer section starts from here------------- */
+.footer {
+  background-color: var(--clr-3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem 1rem;
+  margin-bottom: 50px;
+}
+
+.footer-texts {
+  text-align: center;
+}
+
+.footer-title {
+  font-weight: var(--font-weight-4);
+  color: var(--clr-4);
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-texts .icons i {
+  font-size: 24px;
+  color: var(--clr-4);
+  padding: 10px;
+  background-color: var(--clr-5);
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+.footer-texts .icons i:hover {
+  transform: scale(1.15);
+}
+
+.footer-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+  margin-bottom: 1rem;
+  column-gap: 10px;
+}
+
+.inputs input {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: var(--font-weight-4);
+  color: var(--clr-3);
+}
+.inputs textarea {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: var(--font-weight-4);
+  color: var(--clr-3);
+}
+
+.footer-form button {
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-weight: var(--font-weight-4);
+  color: var(--clr-4);
+  background-color: var(--clr-1);
+  border: 2px solid var(--clr-1);
+  transition: 0.5s ease-in-out;
+}
+
+.footer-form button:hover {
+  border: 2px solid var(--clr-1);
+  background-color: var(--clr-5);
+}
+
+/* copyright */
+
+.copyright {
+  max-width: 88%;
+  margin: 0 auto;
+  background: #FFF4E7;
+  border-radius: 8px;
+  padding: 2rem 10px;
+}
+.copyright p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: var(--font-weight-1);
+    color: var(--clr-5);
+}
 
 /* ---------responsive section--------- */
 
@@ -397,8 +494,7 @@ nav ul li a:hover {
 
   .more-feature-title::before {
     top: 10px;
-}
-
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -427,7 +523,7 @@ nav ul li a:hover {
   .more-feature-title::before {
     height: 4rem;
     top: 5px;
-}
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -484,11 +580,17 @@ nav ul li a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
   }
+
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 3rem;
+  }
 }
 
 @media screen and (max-width: 420px) {
-    .more-feature-title::before {
-        height: 5.5rem;
-        top: 10px;
-    }
+  .more-feature-title::before {
+    height: 5.5rem;
+    top: 10px;
+  }
 }
