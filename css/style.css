@@ -206,6 +206,17 @@ nav ul li a:hover {
   font-size: 45px;
   color: var(--clr-2);
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.more-feature-title::before {
+    content: "";
+    position: absolute;
+    height: 5.4rem;
+    width: 5px;
+    background-color: var(--clr-1);
+    left: -1rem;
+    bottom: 10px;
 }
 
 .more-feature-texts {
@@ -341,28 +352,31 @@ nav ul li a:hover {
 }
 
 .sponsors-title {
-    font-weight: var(--font-weight-4);
-    color: var(--clr-2);
-    font-size: 35px;
-    margin-bottom: 1rem;
+  font-weight: var(--font-weight-4);
+  color: var(--clr-2);
+  font-size: 35px;
+  margin-bottom: 1rem;
 }
 .sponsors-body {
-    font-weight: var(--font-weight-1);
-    color: var(--clr-3);
-    font-size: 15px;
-    margin-bottom: 4rem;
+  font-weight: var(--font-weight-1);
+  color: var(--clr-3);
+  font-size: 15px;
+  margin-bottom: 4rem;
 }
 
 .logos {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
 }
 
-.logos img { 
-    height: 80%;
-    width: 80%;
+.logos img {
+  height: 80%;
+  width: 80%;
+  filter: grayscale(100%);
 }
+
+/* ---------------1 ta new section banaite hobe & footer baki ache r text a kisu kaj korte hobe----------------- */
 
 /* ---------responsive section--------- */
 
@@ -380,6 +394,11 @@ nav ul li a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
   }
+
+  .more-feature-title::before {
+    top: 10px;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -403,8 +422,12 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-}
+  }
 
+  .more-feature-title::before {
+    height: 4rem;
+    top: 5px;
+}
 }
 
 @media screen and (max-width: 576px) {
@@ -460,6 +483,12 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+  }
 }
 
+@media screen and (max-width: 420px) {
+    .more-feature-title::before {
+        height: 5.5rem;
+        top: 10px;
+    }
 }
